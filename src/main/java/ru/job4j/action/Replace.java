@@ -2,7 +2,6 @@ package ru.job4j.action;
 
 import ru.job4j.tracker.*;
 
-
 public class Replace implements UserAction {
     private final Output out;
 
