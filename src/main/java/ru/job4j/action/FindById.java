@@ -17,10 +17,10 @@ public class FindById implements UserAction {
     }
 
     @Override
-    public boolean execute(Input input, Tracker tracker) {
+    public boolean execute(Input input, Store memTracker) {
         out.println("=== Вывод заявки по id ===");
         int id = input.askInt("Введите id: ");
-        Item item = tracker.findById(id);
+        Item item = memTracker.findById(id);
         out.println(Objects.requireNonNullElseGet(item, () -> "Заявка с введенным id: " + id + " не найдена."));
         return true;
     }
