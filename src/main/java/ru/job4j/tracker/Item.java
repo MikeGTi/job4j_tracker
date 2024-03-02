@@ -22,9 +22,14 @@ public class Item {
         this.name = name;
     }
 
-    public Item(String name, int id) {
+    public Item(int id, String name) {
         this.name = name;
         this.id = id;
+    }
+
+    public Item(String name, LocalDateTime created) {
+        this.name = name;
+        this.created = created;
     }
 
     public Item(int id, String name, LocalDateTime created) {

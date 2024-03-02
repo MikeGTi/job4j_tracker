@@ -66,7 +66,8 @@ public class SqlTracker implements Store {
         try (PreparedStatement statement =
                      connection.prepareStatement("UPDATE items SET name = ?, created = ? WHERE id = ?")) {
             statement.setString(1, item.getName());
-            statement.setTimestamp(2, new Timestamp(System.currentTimeMillis()));
+            statement.setTimestamp(2, Timestamp.valueOf((item.getCreated())));
+            statement.setInt(3, id);
             result = statement.executeUpdate() > 0;
         } catch (Exception e) {
             e.printStackTrace();
