@@ -1,0 +1,6 @@
+Tracker profiling (MemTracker, G1GC, Xmx4048m):
+1. Added 10 000 000 items - 2Gb memory usage
+2. Output all items - up to 2.5Gb (avg)
+3. Added 10 000 000 items more  - up to 3.75Gb
+4. Output all items - up to 3.8Gb (avg)
+5. Periodically forced runs garbage collector - memory usage low decreasing.
